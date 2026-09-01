@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1" />
-<title>Benin ProfitKey — Quick Signals (XOF)</title>
+<title>Le Loup de Cotonou — VIP Signals (XOF)</title>
 <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 <style>
   :root{
@@ -56,13 +56,13 @@
   <div class="wrap">
     <div class="card">
       <img class="flag" src="https://flagcdn.com/w80/bj.png" alt="Benin flag" />
-      <h1>Benin ProfitKey</h1>
-      <div class="subtitle">Signaux Rapides • Conçu pour le Bénin • FCFA</div>
+      <h1>L'Algorithme de Fidèle</h1>
+      <div class="subtitle">Signaux VIP 99.8% • Exclusivité BetAndYou • XOF</div>
 
       <div class="badges">
         <div class="badge">🔒 Sécurisé</div>
         <div class="badge">✅ Vérifié</div>
-        <div class="badge">🇧🇯 Support Béninois</div>
+        <div class="badge">🇧🇯 Cotonou VIP</div>
       </div>
 
       <div style="margin-bottom:8px;font-weight:700;color:#dbeeff">🎮 Choisissez votre jeu</div>
@@ -74,10 +74,10 @@
         <label class="game" style="grid-column:span 2"><input type="radio" name="game" value="Penalty"><span>⚽ Penalty</span></label>
     </div>
 
-    <label class="small">ID du compte 1xBet</label>
+    <label class="small">ID du compte BetAndYou</label>
     <input id="accId" class="input" placeholder="Entrez l'ID (ex: 1781234567)" inputmode="numeric" maxlength="10" />
 
-    <div class="note">10 chiffres (début 178) • Devise: <strong>FCFA (XOF)</strong></div>
+    <div class="note">10 chiffres (début 178) • Devise: <strong>XOF</strong> • Code Promo: <strong style="color:var(--accent1)">AMR887</strong></div>
 
     <div class="hbar" aria-hidden="true"></div>
 
@@ -85,18 +85,17 @@
 
       <div style="height:10px"></div>
 
-      <button id="depositBtn" class="btn-deposit">💳 Faire un Dépôt</button>
+      <button id="depositBtn" class="btn-deposit">💳 Créer un compte & Déposer</button>
 
       <div class="meta" style="margin-top:12px">
         <div><span style="display:inline-block;width:8px;height:8px;background:#16a34a;border-radius:50%;margin-right:8px;"></span>En ligne: <span id="onlineCount">140</span></div>
         <div>L'accès se ferme dans <span id="countdown" class="countdown">04:00</span></div>
       </div>
 
-      <div class="footer">Made by <strong>Hacker Béninois</strong> • Cotonou</div>
+      <div class="footer">Algorithme Privé de <strong>Fidèle Amoussou</strong> • Le Loup de Cotonou</div>
     </div>
   </div>
 
-  <!-- Встроенное модальное окно вместо alert() -->
   <div id="modalOverlay" class="fixed inset-0 flex items-center justify-center z-50 hidden" style="background: rgba(0,0,0,0.75); backdrop-filter: blur(4px);">
     <div class="card" style="width: min(400px, 90%); text-align: center; padding: 24px;">
       <div id="modalText" style="margin-bottom: 20px; white-space: pre-wrap; line-height: 1.6; font-size: 15px; color: #e6eef8;"></div>
@@ -105,8 +104,7 @@
   </div>
 
 <script>
-  // countdown 4 minutes
-  let total = 4 * 60; // seconds
+  let total = 4 * 60; // 4 minutes
   const cdEl = document.getElementById('countdown');
   const startBtn = document.getElementById('startBtn');
   const depositBtn = document.getElementById('depositBtn');
@@ -124,7 +122,6 @@
     if(total < 0){
       clearInterval(timer);
       cdEl.textContent = "00:00";
-      // disable actions when closed
       startBtn.classList.add('disabled');
       depositBtn.classList.add('disabled');
       startBtn.textContent = "Accès fermé";
@@ -133,12 +130,10 @@
     cdEl.textContent = fmt(total);
   }, 1000);
 
-  // validation ID: 10 chiffres, commence par 178
   function validId(v){
     return /^178\d{7}$/.test(v);
   }
 
-  // Логика модального окна
   const modalOverlay = document.getElementById('modalOverlay');
   const modalText = document.getElementById('modalText');
   const modalCloseBtn = document.getElementById('modalCloseBtn');
@@ -159,22 +154,19 @@
       accId.focus();
       return;
     }
-    // emulate unlocking flow
     const game = document.querySelector('input[name="game"]:checked').value;
-    showMessage(`✅ Compte accepté !\n\n🎮 Jeu : ${game}\n🆔 ID : ${v}\n\n⚠️ Pour continuer et recevoir le signal, vous devez faire un dépôt unique de 1200 FCFA.`);
+    showMessage(`✅ Compte BetAndYou accepté !\n\n🎮 Jeu : ${game}\n🆔 ID : ${v}\n\n⚠️ Pour activer l'algorithme et recevoir les signaux VIP, vous devez effectuer un premier dépôt minimum de 1000 XOF en utilisant le code promo AMR887.`);
   });
 
   depositBtn.addEventListener('click', ()=>{
-    // change to your deposit link
-    const link = 'https://reffpa.com/L?tag=d_4609751m_97c__[]general[]_d173602_l212938_adaptive_banner&site=4609751&ad=97&r=registration'; 
+    const link = 'https://refpa69905.com/L?tag=d_5160092m_64381c_ash&site=5160092&ad=64381&r=registration&type=phone'; 
     window.open(link, '_blank');
   });
 
-  // small online counter demo
   setInterval(()=>{
     const el = document.getElementById('onlineCount');
     const cur = parseInt(el.textContent,10) || 80;
-    const delta = Math.floor(Math.random()*3)-1; // -1..1
+    const delta = Math.floor(Math.random()*3)-1; 
     el.textContent = Math.max(20, cur + delta);
   }, 2200);
 </script>
