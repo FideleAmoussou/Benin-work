@@ -75,9 +75,9 @@
     </div>
 
     <label class="small">ID du compte BetAndYou</label>
-    <input id="accId" class="input" placeholder="Entrez l'ID (ex: 1781234567)" inputmode="numeric" maxlength="10" />
+    <input id="accId" class="input" placeholder="Entrez l'ID (ex: 1811234567)" inputmode="numeric" maxlength="10" />
 
-    <div class="note">10 chiffres (début 178) • Devise: <strong>XOF</strong> • Code Promo: <strong style="color:var(--accent1)">AMR887</strong></div>
+    <div class="note">10 chiffres (début 181) • Devise: <strong>XOF</strong> • Code Promo: <strong style="color:var(--accent1)">AMR887</strong></div>
 
     <div class="hbar" aria-hidden="true"></div>
 
@@ -150,7 +150,7 @@
   startBtn.addEventListener('click', ()=>{
     const v = accId.value.trim();
     if(!validId(v)){
-      showMessage('⚠️ Veuillez entrer un ID de compte valide de 10 chiffres commençant par 178.');
+      showMessage('⚠️ Veuillez entrer un ID de compte valide de 10 chiffres commençant par 181.');
       accId.focus();
       return;
     }
